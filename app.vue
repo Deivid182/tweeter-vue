@@ -4,7 +4,7 @@ const darkMode = ref(true);
 <template>
   <div :class="{ dark: darkMode }">
     <div class="bg-white dark:bg-black">
-      <div class="min-h-full">
+      <div v-if="false" class="min-h-full">
         <div
           class="grid grid-cols-12 mx-auto lg:max-w-[2560px] sm:px-6 lg:px-8 lg:gap-8"
         >
@@ -27,6 +27,9 @@ const darkMode = ref(true);
             </div>
           </div>
         </div>
+      </div>
+      <div class="v-else">
+        <AuthPage />
       </div>
     </div>
   </div>

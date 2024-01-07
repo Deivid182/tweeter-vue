@@ -11,6 +11,10 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/image",
   ],
+  runtimeConfig: {
+    jwtAccessSecret: process.env.JWT_ACCESSTOKEN_SECRET,
+    jwtRefreshSecret: process.env.JWT_REFRESHTOKEN_SECRET,
+  },
   image: {
     inject: true,
   },
